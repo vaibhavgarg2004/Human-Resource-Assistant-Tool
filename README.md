@@ -91,45 +91,35 @@ Human-Resource-Assistant-Tool/
 
 ## 🧠 How It Works
 
-1. **Tool-Based Functions**  
-   - Each HR task (onboarding, leave requests, meeting scheduling, ticket generation, emailing) is exposed as an MCP tool.
+1. **Tool-Based Functions** : Each HR task (onboarding, leave requests, meeting scheduling, ticket generation, emailing) is exposed as an MCP tool.
 
-2. **Conversational & Tool Use**  
-   - Claude Desktop's agent can select and combine these tools via conversation, automating multi-step HR flows.  
+2. **Conversational & Tool Use** : Claude Desktop's agent can select and combine these tools via conversation, automating multi-step HR flows.  
 
-3. **Data Handling**  
-   - Uses Pydantic schemas for input validation, dummy data for testing, and secure environment-driven email config.
+3. **Data Handling** : Uses Pydantic schemas for input validation, dummy data for testing, and secure environment-driven email config.
 
-4. **Demo & Testing**
-   - Demo datasets for employees, managers, leave records, tickets, and meetings are auto-seeded for a smooth trial
+4. **Demo & Testing** : Demo datasets for employees, managers, leave records, tickets, and meetings are auto-seeded for a smooth trial
 
 ---
 
 ## 💡 Example Workflow: New Employee Onboarding
-1. **Add Employee**:
-   - Fills new record, verifies unique ID and manager exists.
+1. **Add Employee** : Fills new record, verifies unique ID and manager exists.
 
-2. **Welcome Email**:
-   - Email sent with login and next steps.
+2. **Welcome Email** : Email sent with login and next steps.
 
-3. **Manager Notification**:
-   - Manager is alerted automatically.
+3. **Manager Notification** : Manager is alerted automatically.
 
-4. **Raise Tickets**:
-   - Tickets created for IT hardware and welcome kit.
+4. **Raise Tickets**: Tickets created for IT hardware and welcome kit.
 
-5. **Schedule Meeting**:
-   - Manager and employee are booked for an intro call.
+5. **Schedule Meeting**: Manager and employee are booked for an intro call.
 
 ---
 
 ## 💡 Example Workflow: Leave Application
-1. **Apply Leave**:
-   - Employee provides desired leave dates via Claude.
-2. **Validation**:
-   - System checks for overlapping leaves and balance.
-3. **Response**:
-   - Confirmation is sent back, and leave is recorded in the system.
+1. **Apply Leave**: Employee provides desired leave dates via Claude.
+
+2. **Validation**: System checks for overlapping leaves and balance.
+
+3. **Response**: Confirmation is sent back, and leave is recorded in the system.
 
 ---
 
