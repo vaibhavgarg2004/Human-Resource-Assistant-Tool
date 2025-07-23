@@ -94,20 +94,11 @@ def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manag
             meeting_date = current_date + timedelta(days=random.randint(0, 10))
             meeting_hour = random.randint(9, 16)  # 9 AM to 4 PM
 
+            meeting_dt = meeting_date.replace(hour=meeting_hour).isoformat()
             meeting = {
-                "title": random.choice(meeting_types),
-                "date": meeting_date.strftime("%Y-%m-%d"),
-                "time": f"{meeting_hour:02d}:00",
-                "location": random.choice(meeting_locations),
-                "attendees": []
+                "date": meeting_dt,
+                "topic": random.choice(meeting_types)
             }
-
-            # Add some attendees (1-3 other employees)
-            potential_attendees = [e["emp_id"] for e in employees_data if e["emp_id"] != emp_id]
-            num_attendees = min(random.randint(1, 3), len(potential_attendees))
-            attendees = random.sample(potential_attendees, num_attendees)
-
-            meeting["attendees"] = attendees
             meeting_manager.meetings[emp_id].append(meeting)
 
     # Create ticket data
