@@ -61,7 +61,7 @@ def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manag
             history_entry = {
                 "history_id": len(leave_manager.employee_leaves[emp_id]["history"]) + 1,
                 "emp_id": emp_id,
-                "leave_date": leave_date,
+                "leave_date": leave_date.isoformat(),
                 "request_id": request_id_counter
             }
             leave_manager.employee_leaves[emp_id]["history"].append(history_entry)
@@ -73,7 +73,7 @@ def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manag
                     consecutive_entry = {
                         "history_id": len(leave_manager.employee_leaves[emp_id]["history"]) + 1,
                         "emp_id": emp_id,
-                        "leave_date": consecutive_date,
+                        "leave_date": consecutive_date.isoformat(),
                         "request_id": request_id_counter
                     }
                     leave_manager.employee_leaves[emp_id]["history"].append(consecutive_entry)
