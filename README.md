@@ -116,7 +116,9 @@ Human-Resource-Assistant-Tool/
 
 ## 🖼️ Application Snapshot
 
-![New Employee Onboarding Prompt ](prompt.png)(onboarding_prompt.png)
+![Prompt](prompt.png)
+
+![New Employee Onboarding](onboarding_prompt.png)
 
 ---
 
@@ -131,7 +133,7 @@ Human-Resource-Assistant-Tool/
 
 ## 🖼️ Application Snapshot
 
-![Leave Application Prompt ](leave_prompt.png)
+![Leave Application](leave_prompt.png)
 
 ---
 
