@@ -1,6 +1,6 @@
 from datetime import date, timedelta
 import random
-from HRMS import *
+from hr_services import *
 
 def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manager):
     """

@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict
-from HRMS import *
+from hr_services import *
 from utils import seed_services
 from emails import EmailSender
 from dotenv import load_dotenv
