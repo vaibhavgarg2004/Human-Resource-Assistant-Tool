@@ -33,8 +33,6 @@ HR-Assistant Tool enables HR teams to:
 ```
 Human-Resource-Assistant-Tool/
 │
-├── server.py               # MCP server with tool functions (employee, meetings, leave, ticket, email)
-├── emails.py               # Secure, attachment-supporting email sender module
 ├── hr_services/
 │   ├── __init__.py         # Imports core manager classes
 │   ├── employee_manager.py # Manages employee records: add, retrieve, and search by name
@@ -43,6 +41,8 @@ Human-Resource-Assistant-Tool/
 │   ├── ticket_manager.py   # Manages support/service tickets like IT equipment requests
 │   ├── schemas.py          # Data models for employees, tickets, meetings, leaves
 │
+├── server.py               # MCP server with tool functions (employee, meetings, leave, ticket, email)
+├── emails.py               # Secure, attachment-supporting email sender module
 ├── utils.py                # Dummy data seeding for demo/testing
 ├── pyproject.toml          # Project metadata and dependencies
 ├── LICENSE                 # License details
