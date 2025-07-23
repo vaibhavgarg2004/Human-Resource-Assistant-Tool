@@ -116,7 +116,7 @@ Human-Resource-Assistant-Tool/
 
 ## 🖼️ Application Snapshot
 
-![New Employee Onboarding Prompt ](onboarding_prompt.png)
+![New Employee Onboarding Prompt ](prompt.png)(onboarding_prompt.png)
 
 ---
 
