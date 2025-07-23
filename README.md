@@ -1,6 +1,6 @@
 # 🤖 Human Resource Assistant Tool
 
-HR-Assistant Tool is an Agentic AI system built to automate core HR workflows—starting with seamless employee onboarding. Designed for integration with Claude Desktop as an MCP (Model Context Protocol) server, it acts as your digital HR assistant, streamlining repetitive tasks traditionally requiring human intervention.
+HR-Assistant Tool is an Agentic AI system built to automate core HR workflows—starting with seamless employee onboarding, leave management, ticketing, and meeting scheduling. Designed for integration with Claude Desktop as an MCP (Model Context Protocol) server, it acts as your digital HR assistant, streamlining repetitive tasks traditionally requiring human intervention.
 
 ---
 
@@ -14,6 +14,7 @@ HR-Assistant Tool enables HR teams to:
 
 - Onboard employees automatically: from adding records to sending welcome emails and provisioning IT resources.
 - Notify managers and schedule introductory meetings.
+- Manage employee leave balances and history through conversational prompts.
 - Centralize HR operations using an easy tool interface via Claude Desktop MCP.
 
 ## 🛠 Features  
@@ -32,20 +33,20 @@ HR-Assistant Tool enables HR teams to:
 ```
 Human-Resource-Assistant-Tool/
 │
-├── server.py              # MCP server with tool functions (employee, meetings, leave, ticket, email)
-├── emails.py              # Secure, attachment-supporting email sender module
+├── server.py               # MCP server with tool functions (employee, meetings, leave, ticket, email)
+├── emails.py               # Secure, attachment-supporting email sender module
 ├── hr_services/
-│   ├── __init__.py        # Imports core manager classes
-│   ├── employee_manager.py
-│   ├── leave_manager.py
-│   ├── meeting_manager.py
-│   ├── ticket_manager.py
-│   ├── schemas.py         # Data models for employees, tickets, meetings, leaves
+│   ├── __init__.py         # Imports core manager classes
+│   ├── employee_manager.py # Manages employee records: add, retrieve, and search by name
+│   ├── leave_manager.py    # Handles leave applications, balances, and leave history
+│   ├── meeting_manager.py  # Schedules, cancels, and lists employee meetings
+│   ├── ticket_manager.py   # Manages support/service tickets like IT equipment requests
+│   ├── schemas.py          # Data models for employees, tickets, meetings, leaves
 │
-├── utils.py               # Dummy data seeding for demo/testing
-├── pyproject.toml         # Project metadata and dependencies
-├── LICENSE                # License details
-└── README.md              # This documentation
+├── utils.py                # Dummy data seeding for demo/testing
+├── pyproject.toml          # Project metadata and dependencies
+├── LICENSE                 # License details
+└── README.md               # This documentation
 ```
 
 ---
@@ -54,8 +55,8 @@ Human-Resource-Assistant-Tool/
 
 ### Prerequisites:
 - Claude desktop  
-- Python 3.8+
-- uv 0.8.0+
+- Python 3.10+
+- [uv](https://github.com/astral-sh/uv) (Install via `pip install uv`)
 
 1. **Clone the repository**:
    ```bash
@@ -65,7 +66,7 @@ Human-Resource-Assistant-Tool/
 2. **Create a .env file in the root directory with your email credentials**:   
    ```text
     EMAIL=your_email@gmail.com
-    EMAIL_PWD=your_app_password_here (Create it by going to myaccout.google.com/apppasswords)
+    EMAIL_PWD=your_app_password_here  # Create from https://myaccount.google.com/apppasswords
    ```
 3. **Start the Server**:
     ```bash
@@ -106,19 +107,29 @@ Human-Resource-Assistant-Tool/
 
 ## 💡 Example Workflow: New Employee Onboarding
 1. **Add Employee**:
-- Fills new record, verifies unique ID and manager exists.
+   - Fills new record, verifies unique ID and manager exists.
 
 2. **Welcome Email**:
-- Email sent with login and next steps.
+   - Email sent with login and next steps.
 
 3. **Manager Notification**:
-- Manager is alerted automatically.
+   - Manager is alerted automatically.
 
 4. **Raise Tickets**:
-- Tickets created for IT hardware and welcome kit.
+   - Tickets created for IT hardware and welcome kit.
 
 5. **Schedule Meeting**:
-- Manager and employee are booked for an intro call.
+   - Manager and employee are booked for an intro call.
+
+---
+
+## 💡 Example Workflow: Leave Application
+1. **Apply Leave**:
+   - Employee provides desired leave dates via Claude.
+2. **Validation**:
+   - System checks for overlapping leaves and balance.
+3. **Response**:
+   - Confirmation is sent back, and leave is recorded in the system.
 
 ---
 
