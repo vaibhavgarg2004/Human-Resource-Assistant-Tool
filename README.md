@@ -114,6 +114,12 @@ Human-Resource-Assistant-Tool/
 
 ---
 
+## 🖼️ Application Snapshot
+
+![New Employee Onboarding Prompt ](onboarding_prompt.png)
+
+---
+
 ## 💡 Example Workflow: Leave Application
 1. **Apply Leave**: Employee provides desired leave dates via Claude.
 
@@ -123,11 +129,11 @@ Human-Resource-Assistant-Tool/
 
 ---
 
-<!-- ## 🖼️ Application Snapshot
+## 🖼️ Application Snapshot
 
-![Application UI](chat_assistant_ui_preview.png)
+![Leave Application Prompt ](leave_prompt.png)
 
---- -->
+---
 
 ## 📄 License
 This project is licensed under the **Apache License 2.0**. See the [LICENSE](./LICENSE) file for details.

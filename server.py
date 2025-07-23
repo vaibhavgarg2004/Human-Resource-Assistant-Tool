@@ -57,7 +57,11 @@ def get_employee_details(name: str) -> Dict[str, str]:
 
     emp_id = matches[0]
     emp_details = employee_manager.get_employee_details(emp_id)
-    return emp_details
+    return {
+        "emp_id": emp_details["emp_id"],
+        "manager_id": emp_details["manager_id"] or "",
+        "email": emp_details["email"] or ""
+    }
 
 @mcp.tool()
 def send_email(to_emails: List[str], subject: str, body: str, html: bool = False) -> str:
