@@ -82,7 +82,6 @@ def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manag
 
     # Create meeting data
     meeting_types = ["Team Sync", "Project Review", "Client Meeting", "1:1", "Planning"]
-    meeting_locations = ["Conference Room A", "Conference Room B", "Zoom", "MS Teams", "Cafeteria"]
 
     # Generate meetings for each employee
     for employee in employees_data:
@@ -94,7 +93,7 @@ def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manag
             meeting_date = current_date + timedelta(days=random.randint(0, 10))
             meeting_hour = random.randint(9, 16)  # 9 AM to 4 PM
 
-            meeting_dt = meeting_date.replace(hour=meeting_hour).isoformat()
+            meeting_dt = datetime.combine(meeting_date, datetime.min.time()).replace(hour=meeting_hour).isoformat()
             meeting = {
                 "date": meeting_dt,
                 "topic": random.choice(meeting_types)
